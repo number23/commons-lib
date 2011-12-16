@@ -4,7 +4,7 @@
 
 ``` clojure
 (use 'org.clojars.number23_cn.commons-lib.io)
-(def host (prompt-re "Please choose host (:dev or :prd)" #"\:dev|\:prd"))
+(def host (prompt-re "Please choose host (dev or prd)" #"dev|prd"))
 (def user (prompt-read "User"))
 ```
 
