@@ -6,5 +6,4 @@
 
   :main org.clojars.number23_cn.commons-lib.core
   :aot [org.clojars.number23_cn.commons-lib.io
-        org.clojars.number23_cn.commons-lib.util]
-  )
+        org.clojars.number23_cn.commons-lib.util])
