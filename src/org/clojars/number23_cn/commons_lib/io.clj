@@ -21,7 +21,7 @@
 (defn prompt-re
   "re is Pattern, return the match"
   [^String prompt ^java.util.regex.Pattern re]
-  (re-matches re (loop []
-                   (or
-                    (re-matches re (prompt-read prompt))
-                    (recur)))))
+  (loop []
+    (or
+     (re-matches re (prompt-read prompt))
+     (recur))))
