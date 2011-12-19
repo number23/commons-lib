@@ -1,4 +1,4 @@
-(defproject org.clojars.number23_cn/commons-lib "1.0.0"
+(defproject org.clojars.number23_cn/commons-lib "0.0.2"
   :description "commons lib"
   :dependencies [[org.clojure/clojure "1.3.0"]
                  [javax.mail/mail "1.4.4"]]
