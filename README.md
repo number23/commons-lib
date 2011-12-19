@@ -1,5 +1,8 @@
 # commons-lib
 
+## API documentation
+[codox docs](http://number23.no.de/commons-lib/doc/index.html)
+
 ## Usage
 
 ``` clojure
