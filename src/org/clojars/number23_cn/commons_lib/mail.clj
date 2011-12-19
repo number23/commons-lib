@@ -2,7 +2,7 @@
 
 (defn sendmail
   "sendmail by stmp, keys:
-  host, user, poassword,
+  host, port, user, poassword,
   auth, ssl,
   debug,
   from, to, cc, bcc,
@@ -68,7 +68,7 @@
                             (javax.mail.PasswordAuthentication.
                              (:user mail "") (:password mail ""))))
 
-          to (reduce #(str % "," %2) (:to mail))
+          to (if (:to mail) (reduce #(str % "," %2) (:to mail)) nil)
           cc (if (:cc mail) (reduce #(str % "," %2) (:cc mail)) nil)
           bcc (if (:bcc mail) (reduce #(str % "," %2) (:bcc mail)) nil)
 
