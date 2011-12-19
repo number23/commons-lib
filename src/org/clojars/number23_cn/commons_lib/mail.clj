@@ -9,6 +9,7 @@
   subject, text, content
 
   if debug is true, send to bcc only,
+  from is String, to, cc, and bcc is vec,
   if text is setup, send text/plan msg
   content is javax.mail.Multipart
 
@@ -20,6 +21,7 @@
     :password \"secret_password\"
     :port \"587\"
     :auth true
+    :ssl true
     :debug false
     :from \"number23.cn@gmail.com\"
     :to [\"number23.cn@gmail.com\"]
