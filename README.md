@@ -1,7 +1,7 @@
 # commons-lib
 
 ## API documentation
-[codox docs](http://number23.no.de/commons-lib/doc/index.html)
+[codox docs](http://number23.github.com/commons-lib/)
 
 ## Usage
 
