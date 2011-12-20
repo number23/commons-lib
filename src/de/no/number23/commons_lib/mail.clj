@@ -1,4 +1,4 @@
-(ns org.clojars.number23_cn.commons-lib.mail)
+(ns de.no.number23.commons-lib.mail)
 
 (defn sendmail
   "sendmail by stmp, keys:

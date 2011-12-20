@@ -1,4 +1,4 @@
-(ns org.clojars.number23_cn.commons-lib.io)
+(ns de.no.number23.commons-lib.io)
 
 (defn prompt-read
   "return String
