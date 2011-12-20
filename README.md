@@ -14,6 +14,6 @@
 
 ## License
 
-Copyright (C) 2011 number23_cn <number23.cn@gmail.com>
+Copyright (C) 2011 number23_cn <https://twitter.com/number23_cn>
 
 Distributed under the Eclipse Public License, the same as Clojure.
