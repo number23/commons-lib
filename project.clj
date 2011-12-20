@@ -1,5 +1,5 @@
 (defproject de.no.number23/commons-lib "0.0.3"
-  :description "commons lib"
+  :description "my clojure commons lib"
   :dependencies [[org.clojure/clojure "1.3.0"]
                  [javax.mail/mail "1.4.4"]]
   :dev-dependencies [[codox "0.3.0"]
