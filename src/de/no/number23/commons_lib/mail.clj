@@ -1,7 +1,8 @@
 (ns de.no.number23.commons-lib.mail)
 
 (defn sendmail
-  "sendmail by stmp, keys:
+  "simple sendmail function by smtp protocol,
+  base on javax.mail, keys:
   host, port, user, poassword,
   auth, ssl,
   debug,
@@ -30,9 +31,8 @@
 
   with Multipart:
 
-  (import 'javax.mail.Multipart)
-  (import 'javax.mail.internet.MimeBodyPart)
   (import 'javax.mail.internet.MimeMultipart)
+  (import 'javax.mail.internet.MimeBodyPart)
 
   (let [mp (MimeMultipart.)
         hp (MimeBodyPart.)]
