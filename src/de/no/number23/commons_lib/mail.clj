@@ -3,13 +3,13 @@
 (defn sendmail
   "simple sendmail function by smtp protocol,
   base on javax.mail, keys:
-  host, port, user, poassword,
+  host, port, user, password,
   auth, ssl,
   debug,
   from, to, cc, bcc,
   subject, text, content
 
-  if debug is true, send to bcc only,
+  if debug is true, debug output, send to bcc only,
   from is String, to, cc, and bcc is vec,
   if text is setup, send text/plan msg
   content is javax.mail.Multipart
