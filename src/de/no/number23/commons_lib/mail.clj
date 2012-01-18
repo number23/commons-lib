@@ -76,7 +76,6 @@
           msg     (javax.mail.internet.MimeMessage. session)]
 
       (if (= (:debug mail) true) (.setDebug session true))
-      (.setDebug session true)
       (.setFrom msg (javax.mail.internet.InternetAddress. (:from mail)))
 
       (if (= (:debug mail) true)
