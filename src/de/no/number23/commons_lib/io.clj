@@ -1,4 +1,5 @@
-(ns de.no.number23.commons-lib.io)
+(ns de.no.number23.commons-lib.io
+  (:require [clojure.java.io :as io]))
 
 (defn prompt-read
   "return String
@@ -25,3 +26,10 @@
     (or
      (re-matches re (prompt-read prompt))
      (recur))))
+
+(defn processing-file
+  "process a file by line with func"
+  [^String file func]
+  (with-open [rdr (io/reader file)]
+    (doseq [line (line-seq rdr)]
+      (func line))))
