@@ -1,5 +1,7 @@
 # commons-lib
 
+[![Build Status](https://secure.travis-ci.org/number23/commons-lib.png)](http://travis-ci.org/number23/commons-lib)
+
 ## API documentation
 [codox docs](http://number23.github.com/commons-lib/)
 
