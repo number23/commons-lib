@@ -29,7 +29,7 @@
 
 (defn processing-file
   "process a file by line with func"
-  [^String file func]
+  [file func]
   (with-open [rdr (io/reader file)]
     (doseq [line (line-seq rdr)]
       (func line))))
