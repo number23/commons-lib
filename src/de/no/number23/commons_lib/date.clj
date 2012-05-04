@@ -9,6 +9,5 @@
       (.setTime d)
       (.setFirstDayOfWeek (Calendar/SUNDAY)))
     (let [dt (- (.get cal Calendar/DAY_OF_WEEK) 2)]
-      (doto cal
-        (.add Calendar/DATE (- dt))
-        (.getTime)))))
+      (.add cal Calendar/DATE (- dt))
+      (.getTime cal))))
