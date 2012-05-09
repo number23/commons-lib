@@ -6,4 +6,5 @@
                      [lein-clojars "0.8.0"]]
 
   :main de.no.number23.commons-lib.core
-  :aot :all)
+  :aot :all
+  :jvm-opts ["-Xmx1g"])
