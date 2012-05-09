@@ -2,6 +2,7 @@
   (:import (java.util Calendar Date)))
 
 (defn get-Monday
+  "as name, return Monday"
   [^Date d]
   (let [cal (Calendar/getInstance)]
     (.setTime cal d)
