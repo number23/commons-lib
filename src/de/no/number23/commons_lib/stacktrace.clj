@@ -2,7 +2,9 @@
   (:use [clojure.repl :only (root-cause stack-element-str)]))
 
 (defn pst12
-  "return a stack trace of the exception, to the depth requested.
+  "Deprecated.  use with-err-str to get pst output
+
+  return a stack trace of the exception, to the depth requested.
   If none supplied, uses the root cause of the most recent repl exception (*e),
   and a depth of 12.
 
