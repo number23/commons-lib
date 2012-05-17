@@ -8,3 +8,4 @@
 /checkouts
 /.lein-deps-sum
 .DS_Store
+*.asc
