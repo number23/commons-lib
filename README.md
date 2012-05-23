@@ -5,6 +5,12 @@
 ## API documentation
 [codox docs](http://number23.github.com/commons-lib/)
 
+Add this to your project.clj :dependencies list:
+
+    [de.no.number23/commons-lib "0.0.4"]
+
+and checkout API documentation for details.
+
 ## Usage
 
 ``` clojure
@@ -16,6 +22,7 @@
 
 ## License
 
-Copyright (C) 2011 number23_cn <https://twitter.com/number23_cn>
+Copyright (C) 2011-2012 number23_cn <https://twitter.com/number23_cn>
 
-Distributed under the Eclipse Public License, the same as Clojure.
+Distributed under the Eclipse Public License, the same as Clojure. See the
+LICENSE file for details.
