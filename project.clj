@@ -9,7 +9,10 @@
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [javax.mail/mail "1.4.5"]]
 
-  :plugins [[codox "0.6.1"]]
+  :plugins [[codox "0.6.1"]
+            [lein-clojars "0.8.0"]
+            [lein-swank "1.4.4"]
+            [lein-pprint "1.1.1"]]
 
   :main de.no.number23.commons-lib.core
   :aot :all
