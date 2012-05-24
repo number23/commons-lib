@@ -5,10 +5,11 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"
             :distribution :repo
             :comments "same as Clojure"}
+
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [javax.mail/mail "1.4.5"]]
-  :dev-dependencies [[codox "0.6.1"]
-                     [lein-clojars "0.8.0"]]
+
+  :plugins [[codox "0.6.1"]]
 
   :main de.no.number23.commons-lib.core
   :aot :all
