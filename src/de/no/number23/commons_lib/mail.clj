@@ -98,3 +98,31 @@
         (.setText msg (:text mail))
         (.setContent msg (:content mail)))
       (javax.mail.Transport/send msg))))
+
+(defn fill-msg-content
+  "fill message content with text and files,
+  return java.mail.internet.MimeMultipart"
+
+  [^String text & files]
+  (let [mmp (javax.mail.internet.MimeMultipart.)
+        mbp (javax.mail.internet.MimeBodyPart.)
+        sbuf (StringBuilder.)]
+    (-> sbuf
+        (.append "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head><body><pre>")
+        (.append text)
+        (.append "</pre></body></html>"))
+    (.setContent mbp (.toString sbuf) "text/html")
+    (.setHeader mbp "Content-Transfer-Encoding" "base64")
+    (.addBodyPart mmp mbp)
+
+    (letfn [(add-part [f]
+              (let [part (javax.mail.internet.MimeBodyPart.)]
+                (.attachFile part f)
+                (.setHeader part "Content-Transfer-Encoding" "base64")
+                (.addBodyPart mmp part)))]
+      (doseq [file files]
+        (if-let [x file]
+          (if (sequential? x)
+            (doseq [f x] (add-part f))
+            (add-part x)))))
+    mmp))
