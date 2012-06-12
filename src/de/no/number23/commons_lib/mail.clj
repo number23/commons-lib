@@ -121,7 +121,7 @@
                 (.setHeader part "Content-Transfer-Encoding" "base64")
                 (.addBodyPart mmp part)))]
       (doseq [file files]
-        (if-let [x file]
+        (when-let [x file]
           (if (sequential? x)
             (doseq [f x] (add-part f))
             (add-part x)))))
