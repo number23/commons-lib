@@ -1,7 +1,7 @@
 (ns de.no.number23.commons-lib.io
   (:require [clojure.java.io :as io]))
 
-(defn prompt-read
+(defn ^String prompt-read
   "return String
   from http://thinkrelevance.com/blog/2008/09/16/pcl-clojure-chapter-3.html"
   [^String prompt]

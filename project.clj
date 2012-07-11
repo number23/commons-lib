@@ -14,6 +14,7 @@
             [lein-swank "1.4.4"]
             [lein-pprint "1.1.1"]]
 
+  :warn-on-reflection true
   :main de.no.number23.commons-lib.core
   :aot :all
   :jvm-opts ["-Xmx1g"])

@@ -115,7 +115,7 @@
     (.setHeader mbp "Content-Transfer-Encoding" "base64")
     (.addBodyPart mmp mbp)
 
-    (letfn [(add-part [f]
+    (letfn [(add-part [^String f]
               (let [part (javax.mail.internet.MimeBodyPart.)]
                 (.attachFile part f)
                 (.setHeader part "Content-Transfer-Encoding" "base64")
