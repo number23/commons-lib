@@ -111,7 +111,7 @@
         (.append "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head><body><pre>")
         (.append text)
         (.append "</pre></body></html>"))
-    (.setContent mbp (.toString sbuf) "text/html")
+    (.setContent mbp (.toString sbuf) "text/html; charset=utf-8")
     (.setHeader mbp "Content-Transfer-Encoding" "base64")
     (.addBodyPart mmp mbp)
 
