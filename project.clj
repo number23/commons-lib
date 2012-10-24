@@ -1,4 +1,4 @@
-(defproject org.clojars.number23_cn/commons-lib "0.2.1"
+(defproject org.clojars.number23/commons-lib "0.2.2"
   :description "my clojure commons lib"
   :url "https://github.com/number23/commons-lib"
   :license {:name "Eclipse Public License - v 1.0"
@@ -14,6 +14,6 @@
             [lein-pprint "1.1.1"]]
 
   :warn-on-reflection true
-  :main de.no.number23.commons-lib.core
+  :main org.clojars.number23.commons-lib.core
   :aot :all
   :jvm-opts ["-Xmx1g"])

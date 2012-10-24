@@ -1,4 +1,4 @@
-(ns org.clojars.number23_cn.commons-lib.stacktrace
+(ns org.clojars.number23.commons-lib.stacktrace
   (:use [clojure.repl :only (root-cause stack-element-str)]))
 
 (defn pst12

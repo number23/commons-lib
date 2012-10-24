@@ -1,4 +1,4 @@
-(ns org.clojars.number23_cn.commons-lib.date
+(ns org.clojars.number23.commons-lib.date
   (:import (java.util Calendar Date)))
 
 (defn get-Monday

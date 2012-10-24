@@ -1,4 +1,4 @@
-(ns org.clojars.number23_cn.commons-lib.core)
+(ns org.clojars.number23.commons-lib.core)
 
 (defn -main
   "Hello Clojure, I Love U"

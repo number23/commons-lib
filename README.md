@@ -7,14 +7,14 @@
 
 Add this to your project.clj :dependencies list:
 
-    [de.no.number23/commons-lib "0.0.4"]
+    [org.clojars.number23/commons-lib "0.2.2"]
 
 and checkout API documentation for details.
 
 ## Usage
 
 ``` clojure
-(use 'de.no.number23.commons-lib.io)
+(use 'org.clojars.number23.commons-lib.io)
 (def host (prompt-re "Please choose host (dev or prd)" #"dev|prd"))
 (def user (prompt-read "User"))
 ```

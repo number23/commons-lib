@@ -1,4 +1,4 @@
-(ns org.clojars.number23_cn.commons-lib.mail)
+(ns org.clojars.number23.commons-lib.mail)
 
 (defn sendmail
   "simple sendmail function by smtp protocol,
