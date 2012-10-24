@@ -1,4 +1,4 @@
-(ns de.no.number23.commons-lib.io
+(ns org.clojars.number23_cn.commons-lib.io
   (:require [clojure.java.io :as io]))
 
 (defn ^String prompt-read

@@ -1,4 +1,4 @@
-(ns de.no.number23.commons-lib.util)
+(ns org.clojars.number23_cn.commons-lib.util)
 
 (defn exit
   "exit the program"
