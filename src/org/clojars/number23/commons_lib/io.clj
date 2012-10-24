@@ -43,3 +43,6 @@
      (binding [*err* s#]
        ~@body
        (str s#))))
+
+(defn parse-int "parse string into int" [^String s] (Integer/parseInt s))
+(defn split-str-with-comma "return a vec" [^String s] (vec (.split s ",")))
