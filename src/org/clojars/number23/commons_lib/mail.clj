@@ -1,7 +1,7 @@
 (ns org.clojars.number23.commons-lib.mail)
 
 (defn sendmail
-  "simple sendmail function by smtp protocol,
+  "Simple sendmail function by smtp protocol,
   base on javax.mail, keys:
   host, port, user, password,
   auth, ssl,
@@ -12,7 +12,7 @@
   if debug is true, debug output, send to bcc only,
   from is String, to, cc, and bcc is vec,
   if text is setup, send text/plan msg
-  content is javax.mail.Multipart
+  content is javax.mail.Multipart.
 
   usag:
 
@@ -100,8 +100,8 @@
       (javax.mail.Transport/send msg))))
 
 (defn fill-msg-content
-  "fill message content with text and files,
-  return java.mail.internet.MimeMultipart"
+  "Fill message content with text and files,
+  return java.mail.internet.MimeMultipart."
 
   [^String text & files]
   (let [mmp (javax.mail.internet.MimeMultipart.)

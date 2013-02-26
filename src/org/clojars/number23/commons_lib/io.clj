@@ -2,16 +2,16 @@
   (:require [clojure.java.io :as io]))
 
 (defn ^String prompt-read
-  "return String
-  from http://thinkrelevance.com/blog/2008/09/16/pcl-clojure-chapter-3.html"
+  "Return String
+  from http://thinkrelevance.com/blog/2008/09/16/pcl-clojure-chapter-3.html."
   [^String prompt]
   (print (format "%s: " prompt))
   (flush)
   (read-line))
 
 (defn y-or-n
-  "return true if input y, n return false
-  from http://thinkrelevance.com/blog/2008/09/16/pcl-clojure-chapter-3.html"
+  "Return true if input y, n return false
+  from http://thinkrelevance.com/blog/2008/09/16/pcl-clojure-chapter-3.html."
   [^String prompt]
   (= "y"
      (loop []
@@ -20,7 +20,7 @@
         (recur)))))
 
 (defn prompt-re
-  "re is Pattern, return the match"
+  "Re is Pattern, return the match."
   [^String prompt ^java.util.regex.Pattern re]
   (loop []
     (or
@@ -28,7 +28,7 @@
      (recur))))
 
 (defn processing-file
-  "process a file by line with func"
+  "Process a file by line with func."
   [file func]
   (with-open [rdr (io/reader file)]
     (doseq [line (line-seq rdr)]
@@ -44,5 +44,5 @@
        ~@body
        (str s#))))
 
-(defn parse-int "parse string into int" [^String s] (Integer/parseInt s))
-(defn split-str-with-comma "return a vec" [^String s] (vec (.split s ",")))
+(defn parse-int "Parse string into int." [^String s] (Integer/parseInt s))
+(defn split-str-with-comma "Return a vec" [^String s] (vec (.split s ",")))

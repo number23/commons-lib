@@ -2,7 +2,7 @@
   (:import (java.util Calendar Date)))
 
 (defn get-Monday
-  "as name, return Monday"
+  "As name, return Monday."
   [^Date d]
   (let [cal (Calendar/getInstance)]
     (.setTime cal d)
@@ -11,6 +11,6 @@
       (.getTime cal))))
 
 (defn cdts
-  "return current datetime string: yyyy-MM-dd HH:mm:ss"
+  "Return current datetime string: yyyy-MM-dd HH:mm:ss."
   []
   (format "%1$tF %1$tT" (Date.)))
