@@ -10,7 +10,6 @@
                  [javax.mail/mail "1.4.5"]]
 
   :plugins [[codox "0.6.1"]
-            [lein-clojars "0.9.1"]
             [lein-pprint "1.1.1"]]
 
   :warn-on-reflection true
