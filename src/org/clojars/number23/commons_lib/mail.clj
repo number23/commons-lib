@@ -106,6 +106,11 @@
   [^String text & files]
   (let [mmp (javax.mail.internet.MimeMultipart.)
         mbp (javax.mail.internet.MimeBodyPart.)
+        add-part (fn [^String f]
+                   (let [part (javax.mail.internet.MimeBodyPart.)]
+                     (.attachFile part f)
+                     (.setHeader part "Content-Transfer-Encoding" "base64")
+                     (.addBodyPart mmp part)))
         sbuf (StringBuilder.)]
     (-> sbuf
         (.append "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head><body><pre>")
@@ -115,14 +120,9 @@
     (.setHeader mbp "Content-Transfer-Encoding" "base64")
     (.addBodyPart mmp mbp)
 
-    (letfn [(add-part [^String f]
-              (let [part (javax.mail.internet.MimeBodyPart.)]
-                (.attachFile part f)
-                (.setHeader part "Content-Transfer-Encoding" "base64")
-                (.addBodyPart mmp part)))]
-      (doseq [file files]
-        (when-let [x file]
-          (if (sequential? x)
-            (doseq [f x] (add-part f))
-            (add-part x)))))
+    (doseq [file files]
+      (when-let [x file]
+        (if (sequential? x)
+          (doseq [f x] (add-part f))
+          (add-part x))))
     mmp))
