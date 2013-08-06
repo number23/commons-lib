@@ -14,5 +14,4 @@
 
   :warn-on-reflection true
   :main org.clojars.number23.commons-lib.core
-  :aot :all
   :jvm-opts ["-Xmx1g"])
