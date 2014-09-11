@@ -1,4 +1,4 @@
-(defproject org.clojars.number23/commons-lib "0.2.2"
+(defproject org.clojars.number23/commons-lib "0.2.3"
   :description "my clojure commons lib"
   :url "https://github.com/number23/commons-lib"
   :license {:name "Eclipse Public License - v 1.0"

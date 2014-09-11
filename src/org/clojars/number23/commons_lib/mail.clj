@@ -1,5 +1,10 @@
 (ns org.clojars.number23.commons-lib.mail)
 
+(defn- ^String utf8-subject
+  ""
+  [^String s]
+  (javax.mail.internet.MimeUtility/encodeText s "utf8" "B"))
+
 (defn sendmail
   "Simple sendmail function by smtp protocol,
   base on javax.mail, keys:
@@ -93,7 +98,7 @@
                                   (javax.mail.Message$RecipientType/BCC)
                                   (javax.mail.internet.InternetAddress/parse bcc)))))
 
-      (.setSubject msg (:subject mail))
+      (.setSubject msg (utf8-subject (:subject mail)))
       (if (:text mail nil)
         (.setText msg (:text mail))
         (.setContent msg (:content mail)))
