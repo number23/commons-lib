@@ -131,3 +131,26 @@
           (doseq [f x] (add-part f))
           (add-part x))))
     mmp))
+
+(defn fill-msg-content-2
+  "Fill message content with text and files,
+  return java.mail.internet.MimeMultipart."
+
+  [^String text & files]
+  (let [mmp (javax.mail.internet.MimeMultipart.)
+        mbp (javax.mail.internet.MimeBodyPart.)
+        add-part (fn [^String f]
+                   (let [part (javax.mail.internet.MimeBodyPart.)]
+                     (.attachFile part f)
+                     (.setHeader part "Content-Transfer-Encoding" "base64")
+                     (.addBodyPart mmp part)))]
+    (.setContent mbp text "text/html; charset=utf-8")
+    (.setHeader mbp "Content-Transfer-Encoding" "base64")
+    (.addBodyPart mmp mbp)
+
+    (doseq [file files]
+      (when-let [x file]
+        (if (sequential? x)
+          (doseq [f x] (add-part f))
+          (add-part x))))
+    mmp))
