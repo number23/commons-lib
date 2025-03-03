@@ -1,4 +1,4 @@
-(defproject org.clojars.number23/commons-lib "0.2.3"
+(defproject org.clojars.number23/commons-lib "0.2.4"
   :description "my clojure commons lib"
   :url "https://github.com/number23/commons-lib"
   :license {:name "Eclipse Public License - v 1.0"
@@ -6,8 +6,8 @@
             :distribution :repo
             :comments "same as Clojure"}
 
-  :dependencies [[org.clojure/clojure "1.4.0"]
-                 [javax.mail/mail "1.4.5"]]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [com.sun.mail/javax.mail "1.6.2"]]
 
   :plugins [[codox "0.6.1"]
             [lein-pprint "1.1.1"]]
